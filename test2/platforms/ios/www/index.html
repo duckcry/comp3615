@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Heart Age</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+        <meta charset="UTF-8">
+<link rel="stylesheet" href="themes/blue_new_medium.min.css" />
+<link rel="stylesheet" href="jquery.mobile-1.3.2/jquery.mobile.structure-1.3.2.min.css" />
+<script src="jquery-1.10.2.min.js"></script>
+<script src="jquery.mobile-1.3.2/jquery.mobile-1.3.2.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript">
+
+        function onBodyLoad()
+        {       
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
+
+        function onDeviceReady()
+        {
+            // do your thing!
+            navigator.notification.alert("Welcome to China!")
+        }
+
+        </script>
+    </head>
+<body onload="onBodyLoad()">
+<div data-role="page" id="page1" data-theme="a">
+        <div data-role="header">
+            <h1>Heart Age</h1>
+        </div>
+        <div data-role="content">
+            <ul data-count-theme="a" data-inset="true" data-role="listview" data-theme="a" data-divider-theme="a">
+                <li><a href="#page2">Start Calculating your Heart Age</a></li>
+            </ul>
+       </div>
+	</div>
+
+<div data-role="page" id="page2" data-theme="a">
+  <div data-role="header">
+    <h1>General Question</h1>
+  </div>
+  <div data-role="content">
+  		<div data-role="fieldcontain">
+        	<fieldset data-role="controlgroup">
+            	<legend><b>What is you gender?</b></legend>
+                <input type="radio" name="gender" id="gender_0" value="" />
+                <label for="gender_0">Male</label>
+                <input type="radio" name="gender" id="gender_1" value="" />
+                <label for="gender_1">Female</label>
+            </fieldset>
+        </div>
+     	<div data-role="fieldcontain">
+        	<label for="slider"><b>What is your age?:</b></label>
+            <input type="range" name="slider" id="slider" value="1" min="1" max="100" />
+        </div>
+         <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup">
+            <legend><b>Do you currently smoke?</b></legend>
+            <input type="radio" name="yes" id="smoke_0" value="" />
+            <label for="smoke_0">Yes</label>
+            <input type="radio" name="no" id="smoke_1" value="" />
+            <label for="smoke_1">No</label>
+        </fieldset>
+    </div>
+     <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup">
+            <legend><b>Have you been diagnosed with diabetes?</b></legend>
+            <input type="radio" name="yes" id="diabetes_0" value="" />
+            <label for="diabetes_0">Yes</label>
+            <input type="radio" name="no" id="diabetes_1" value="" />
+            <label for="diabetes_1">No</label>
+        </fieldset>
+    </div>
+        <a href="#page3" data-role="button">Next</a>
+        <a href="#page1" data-role="button">Back</a>
+  </div>
+</div>
+
+
+<div data-role="page" id="page3" data-theme="a">
+<div data-role="header">
+	<h1>Medical History</h1>
+</div>
+<div data-role="content">
+	<div data-role="fieldcontain">
+    	<fieldset data-role="controlgroup">
+        	<legend><b>Have you ever experienced a heart attack, stroke or bypass surgery?</b></legend>
+            <input type="radio" name="gender" id="gender_0" value="" />
+            <label for="gender_0">Yes</label>
+            <input type="radio" name="gender" id="gender_1" value="" />
+            <label for="gender_1">No</label>
+        </fieldset>
+    </div>
+    <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup">
+            <legend><b>Are you currently taking cholesterol lowering medication?</b></legend>
+            <input type="radio" name="gender" id="gender_0" value="" />
+            <label for="gender_0">Yes</label>
+            <input type="radio" name="gender" id="gender_1" value="" />
+            <label for="gender_1">No</label>
+        </fieldset>
+    </div>
+    <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup">
+            <legend><b>Are you currently taking blood pressure lowering medication?</b></legend>
+            <input type="radio" name="gender" id="gender_0" value="" />
+            <label for="gender_0">Yes</label>
+            <input type="radio" name="gender" id="gender_1" value="" />
+            <label for="gender_1">No</label>
+        </fieldset>
+    </div>
+    <a href="#page4" data-role="button">Next</a>
+    <a href="#page2" data-role="button">Back</a>
+    </div>
+</div>
+
+<div data-role="page" id="page4" data-theme="a">
+  <div data-role="header">
+    <h1>Cardiological Question</h1>
+  </div>
+  <div data-role="content">
+  	<div data-role="fieldcontain">
+      <label for="textinput"><b>What is your height?</b></label>
+      <table>
+      <tr>
+      	<td>
+      		<input type="text" name="textinput" id="textinput" value=""  />
+      	</td>
+        <td>
+            <fieldset data-role="controlgroup" data-type="horizontal">
+              <input type="checkbox" name="checkbox1" id="checkbox1_0" class="custom" value="" />
+              <label for="checkbox1_0">cm</label>
+              <input type="checkbox" name="checkbox1" id="checkbox1_1" class="custom" value="" />
+              <label for="checkbox1_1">feet</label>
+            </fieldset>
+        </td>
+      </tr>
+      </table>
+    </div>
+    <div data-role="fieldcontain">
+      <label for="textinput"><b>What is your weight?</b></label>
+      <table>
+      <tr>
+      	<td>
+      		<input type="text" name="textinput" id="textinput" value=""  />
+      	</td>
+        <td>
+            <fieldset data-role="controlgroup" data-type="horizontal">
+              <input type="checkbox" name="checkbox1" id="checkbox1_0" class="custom" value="" />
+              <label for="checkbox1_0">kg</label>
+              <input type="checkbox" name="checkbox1" id="checkbox1_1" class="custom" value="" />
+              <label for="checkbox1_1">pound</label>
+            </fieldset>
+        </td>
+      </tr>
+      </table>
+    </div>
+    <div data-role="fieldcontain">
+      <label for="textinput"><b>What is your systolic blood pressure level - the larger blood pressure number?</b></label>
+      <table>
+      <tr>
+      	<td>
+      		<input type="text" name="textinput" id="textinput" value=""  />
+      	</td>
+        <td>
+            <fieldset data-role="controlgroup" data-type="horizontal">
+              <input type="checkbox" name="checkbox1" id="checkbox1_0" class="custom" value="" />
+              <label for="checkbox1_0">I don't know</label>
+            </fieldset>
+        </td>
+      </tr>
+      </table>
+    </div>
+    
+     <div data-role="fieldcontain">
+      <label for="textinput"><b>What is your diastolic blood pressure level - the smaller blood pressure number? </b></label>
+      <table>
+      <tr>
+      	<td>
+      		<input type="text" name="textinput" id="textinput" value=""  />
+      	</td>
+        <td>
+            <fieldset data-role="controlgroup" data-type="horizontal">
+              <input type="checkbox" name="checkbox1" id="checkbox1_0" class="custom" value="" />
+              <label for="checkbox1_0">I don't know</label>
+            </fieldset>
+        </td>
+      </tr>
+      </table>
+    </div>
+    
+    <div data-role="fieldcontain">
+      <label for="textinput"><b>What is your total cholesterol level – sometimes referred to as ‘bad’ cholesterol?</b></label>
+      <table>
+      <tr>
+      	<td>
+      		<input type="text" name="textinput" id="textinput" value=""  />
+      	</td>
+        <td>
+            <fieldset data-role="controlgroup" data-type="horizontal">
+              <input type="checkbox" name="checkbox1" id="checkbox1_0" class="custom" value="" />
+              <label for="checkbox1_0">I don't know</label>
+            </fieldset>
+        </td>
+      </tr>
+      </table>
+    </div>
+    
+    <div data-role="fieldcontain">
+      <label for="textinput"><b>What is your HDL cholesterol level – sometimes referred to as ‘good’ cholesterol?</b></label>
+      <table>
+      <tr>
+      	<td>
+      		<input type="text" name="textinput" id="textinput" value=""  />
+      	</td>
+        <td>
+            <fieldset data-role="controlgroup" data-type="horizontal">
+              <input type="checkbox" name="checkbox1" id="checkbox1_0" class="custom" value="" />
+              <label for="checkbox1_0">I don't know</label>
+            </fieldset>
+        </td>
+      </tr>
+      </table>
+    </div>
+	<a href="#page6" data-role="button">Next</a>
+    <a href="#page3" data-role="button">Back</a>
+  </div>
+</div>
+
+<div data-role="page" id="page6" data-theme="a">
+        <div data-role="header">
+            <h1>Heart Age Result</h1>
+        </div>
+        <div data-role="content">
+            <h1>Your Heart Age is 18 :)</h1>
+            <a href="#page1" data-role="button">Back to start</a>
+       </div>
+	</div>
+
+</body>
+</html>
+
